@@ -24,6 +24,7 @@ import '../presentation/state_holders/wishlist_product_delete_controller.dart';
 
 
 
+
 class StateHolderBinder extends Bindings {
   @override
   void dependencies() {

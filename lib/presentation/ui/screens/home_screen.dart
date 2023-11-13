@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ecommerce_project_16/presentation/state_holders/auth_controller.dart';
 import 'package:flutter_ecommerce_project_16/presentation/state_holders/category_controller.dart';
 import 'package:flutter_ecommerce_project_16/presentation/state_holders/home_slider_controller.dart';
 import 'package:flutter_ecommerce_project_16/presentation/state_holders/main_bottom_nav_controller.dart';
 import 'package:flutter_ecommerce_project_16/presentation/state_holders/popular_product_controller.dart';
 import 'package:flutter_ecommerce_project_16/presentation/ui/screens/auth/complete_profile_screen.dart';
+import 'package:flutter_ecommerce_project_16/presentation/ui/screens/auth/email_verification_screen.dart';
 import 'package:flutter_ecommerce_project_16/presentation/ui/screens/product_list_screen.dart';
 import 'package:flutter_ecommerce_project_16/presentation/ui/utility/image_assets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -74,6 +76,23 @@ class _HomeScreenState extends State<HomeScreen> {
               CircularIconButton(
                 icon: Icons.notifications_none,
                 onTap: () {},
+              ),
+              const SizedBox(
+                width: 8,
+              ),
+              CircularIconButton(
+                icon: Icons.logout_outlined,
+                onTap: () async {
+                  await AuthController.clear();
+                  await AuthController.getAccessToken();
+                  Get.snackbar('Success', 'Logout successful',
+                  borderRadius: 10,
+                  snackPosition: SnackPosition.BOTTOM);
+                  Get.offAll(() => const EmailVerificationScreen());
+                },
+              ),
+              const SizedBox(
+                width: 8,
               ),
             ],
           )),
