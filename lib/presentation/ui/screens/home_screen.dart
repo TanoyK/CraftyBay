@@ -4,7 +4,6 @@ import 'package:flutter_ecommerce_project_16/presentation/state_holders/category
 import 'package:flutter_ecommerce_project_16/presentation/state_holders/home_slider_controller.dart';
 import 'package:flutter_ecommerce_project_16/presentation/state_holders/main_bottom_nav_controller.dart';
 import 'package:flutter_ecommerce_project_16/presentation/state_holders/popular_product_controller.dart';
-import 'package:flutter_ecommerce_project_16/presentation/ui/screens/auth/complete_profile_screen.dart';
 import 'package:flutter_ecommerce_project_16/presentation/ui/screens/auth/email_verification_screen.dart';
 import 'package:flutter_ecommerce_project_16/presentation/ui/screens/product_list_screen.dart';
 import 'package:flutter_ecommerce_project_16/presentation/ui/utility/image_assets.dart';
